@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Path Redirect</title>
+    <script>
+        // 定义路径与目标网址的映射
+        const pathRedirectMap = {
+            "/blog": "https://blog.yangtong.sbs/",
+            "/bs": "https://blessings.yangtong.sbs",
+            "/draw": "https://drawlots.yangtong.sbs",
+            "/gemini": "https://gemini.yangtong.sbs",
+            "/ai": "https://gemini.yangtong.sbs"
+        };
+
+        // 获取当前路径
+        const currentPath = window.location.pathname;
+
+        // 检查路径并进行重定向
+        if (pathRedirectMap[currentPath]) {
+            window.location.href = pathRedirectMap[currentPath];
+        }
+    </script>
+</head>
+<body>
+    <h1>如果路径匹配，您会被重定向。</h1>
+</body>
+</html>
